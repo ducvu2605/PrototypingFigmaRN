@@ -4,9 +4,9 @@ const themedStyles = styleSheetFactory((theme) => ({
     width: 135,
     height: 5,
     backgroundColor: 'black',
-    marginTop: 32,
     borderRadius: 10,
-    alignSelf: 'center',
+    alignSelf:'center',
+    marginBottom: 8,
   }
 }))
 export default themedStyles;

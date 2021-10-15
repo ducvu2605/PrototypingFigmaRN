@@ -16,7 +16,7 @@ const ButtonCT = (props) => {
 
   if (type === 'OUTLINE') {
     return (
-      <TouchableOpacity style={styles.containerOUTLINE}>
+      <TouchableOpacity style={[styles.containerOUTLINE,style]}>
         <Text style={styles.containerTextOUTLINE}>{title}</Text>
       </TouchableOpacity>
     )
