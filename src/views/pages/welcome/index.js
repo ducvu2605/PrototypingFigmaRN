@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Image, ImageBackground, Text } from 'react-native';
+import { SvgXml } from 'react-native-svg';
 import { useTheme } from 'react-native-themed-styles';
+import { svgs } from '../../../assets/images/svgs';
 import globalStyles from '../../../constants/globalStyles';
 import ButtonCT from '../../components/buttonCT';
 import IndicatorBottomCT from '../../components/indicatorBottomCT';

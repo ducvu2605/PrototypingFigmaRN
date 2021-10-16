@@ -15,6 +15,7 @@ const themedStyles = styleSheetFactory(theme => ({
     textAlign: 'center',
     flexShrink: 1,
     fontSize: 13,
+    textTransform:'uppercase',
   },
   containerOUTLINE: {
     width: '100%',
@@ -30,6 +31,7 @@ const themedStyles = styleSheetFactory(theme => ({
     textAlign: 'center',
     flexShrink: 1,
     fontSize: 13,
+    textTransform:'uppercase',
   },
 
 }))
