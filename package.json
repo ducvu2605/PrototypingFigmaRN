@@ -10,14 +10,20 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "react": "17.0.2",
-    "react-native": "0.66.0"
+    "react-native": "0.66.0",
+    "react-native-appearance": "^0.3.4",
+    "react-native-svg": "^12.1.1",
+    "react-native-svg-transformer": "^0.14.3",
+    "react-native-themed-styles": "^0.0.4"
   },
   "devDependencies": {
     "@babel/core": "7.15.8",
     "@babel/runtime": "7.15.4",
     "@react-native-community/eslint-config": "2.0.0",
     "babel-jest": "26.6.3",
+    "babel-plugin-inline-import": "^3.0.0",
     "eslint": "7.14.0",
     "jest": "26.6.3",
     "metro-react-native-babel-preset": "0.66.2",
