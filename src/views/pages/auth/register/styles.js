@@ -1,4 +1,4 @@
-import { styleSheetFactory } from "../../../../constants/themes";
+import {styleSheetFactory} from '../../../../constants/themes';
 
 const themedStyles = styleSheetFactory(theme => ({
   container: {
@@ -19,6 +19,6 @@ const themedStyles = styleSheetFactory(theme => ({
   },
   textUnderline: {
     textDecorationLine: 'underline',
-  }
+  },
 }));
 export default themedStyles;

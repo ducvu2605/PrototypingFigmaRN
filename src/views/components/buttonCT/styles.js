@@ -1,4 +1,4 @@
-import { styleSheetFactory } from '../../../constants/themes';
+import {styleSheetFactory} from '../../../constants/themes';
 
 const themedStyles = styleSheetFactory(theme => ({
   containerFULL: {
@@ -15,7 +15,7 @@ const themedStyles = styleSheetFactory(theme => ({
     textAlign: 'center',
     flexShrink: 1,
     fontSize: 13,
-    textTransform:'uppercase',
+    textTransform: 'uppercase',
   },
   containerOUTLINE: {
     width: '100%',
@@ -31,9 +31,8 @@ const themedStyles = styleSheetFactory(theme => ({
     textAlign: 'center',
     flexShrink: 1,
     fontSize: 13,
-    textTransform:'uppercase',
+    textTransform: 'uppercase',
   },
-
-}))
+}));
 
 export default themedStyles;

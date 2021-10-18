@@ -10,8 +10,7 @@ import icNew from './ic_new.svg';
 import icProfile from './ic_profile.svg';
 import icSearch from './ic_search.svg';
 
-export const svgs =
-{
+export const svgs = {
   background,
   icLogo,
   icArrowBack,
@@ -21,4 +20,4 @@ export const svgs =
   icNew,
   icProfile,
   icSearch,
-}
+};

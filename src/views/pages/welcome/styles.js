@@ -1,21 +1,20 @@
-import { styleSheetFactory } from "../../../constants/themes";
+import {styleSheetFactory} from '../../../constants/themes';
 
 const themedStyles = styleSheetFactory(theme => ({
   containerImage: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   imageBackground: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   imageLogo: {
     width: 38,
     height: 38,
-    backgroundColor: 'red',
-    marginRight: 20
+    marginRight: 20,
   },
   containerButton: {
     height: 92,
@@ -23,9 +22,9 @@ const themedStyles = styleSheetFactory(theme => ({
     alignItems: 'center',
     paddingHorizontal: 16,
   },
-  buttonLeft:{
+  buttonLeft: {
     flex: 1,
-     marginRight: 9 
+    marginRight: 9,
   },
-}))
+}));
 export default themedStyles;

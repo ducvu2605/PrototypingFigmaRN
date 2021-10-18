@@ -1,4 +1,4 @@
-import { styleSheetFactory } from "../../../constants/themes";
+import {styleSheetFactory} from '../../../constants/themes';
 
 const themedStyles = styleSheetFactory(theme => ({
   titleHeader: {
@@ -17,6 +17,6 @@ const themedStyles = styleSheetFactory(theme => ({
     color: 'black',
     textAlign: 'left',
     paddingHorizontal: 16,
-  }
+  },
 }));
 export default themedStyles;
