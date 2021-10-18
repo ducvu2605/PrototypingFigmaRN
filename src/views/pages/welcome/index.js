@@ -13,6 +13,8 @@ import themedStyles from './styles';
 const Welcome = () => {
   const [styles, themed] = useTheme(themedStyles);
   const [glbStyles] = useTheme(globalStyles);
+  const onLoginPressed = () => {};
+  const onRegisterPressed = () => {};
   return (
     <View style={glbStyles.flx}>
       <View style={styles.containerImage}>
@@ -25,8 +27,17 @@ const Welcome = () => {
       </View>
 
       <View style={styles.containerButton}>
-        <ButtonCT style={styles.buttonLeft} type="OUTLINE" title="LOG IN" />
-        <ButtonCT style={glbStyles.flx} title="REGISTER" />
+        <ButtonCT
+          style={styles.buttonLeft}
+          type="OUTLINE"
+          title="LOG IN"
+          onPress={onLoginPressed}
+        />
+        <ButtonCT
+          style={glbStyles.flx}
+          title="REGISTER"
+          onPress={onRegisterPressed}
+        />
       </View>
       <IndicatorBottomCT />
     </View>

@@ -6,34 +6,86 @@ import InputCT from '../../../components/inputCT';
 import ButtonCT from '../../../components/buttonCT';
 import {SvgXml} from 'react-native-svg';
 import {svgs} from '../../../../assets/images/svgs';
+import {enumStepSignUp} from '../../../../constants';
+import {useMergeState} from '../../../../utils/hooks';
 const Register = () => {
   const [styles, themed] = useTheme(themedStyles);
-  const enumStep = {step1: 'STEP-1', step2: 'STEP-2'};
+  const [state, setState] = useMergeState({
+    currentStep: enumStepSignUp.step1,
+    email: '',
+    password: '',
+    yourName: '',
+  });
+
   useEffect(() => {
     Keyboard.dismiss();
+    setState({currentStep: enumStepSignUp.step1});
   }, []);
+
+  const onNextPressed = () => {
+    setState({currentStep: enumStepSignUp.step2});
+  };
+  const onSignUpPressed = () => {};
+
+  const onBackPressed = () => {
+    Keyboard.dismiss();
+    if (state.currentStep === enumStepSignUp.step2) {
+      setState({currentStep: enumStepSignUp.step1});
+    } else {
+      //step 1 -> previous screen
+    }
+  };
+
+  const onChangeTextEmail = text => {
+    setState({email: text});
+  };
+
+  const onChangeTextPassword = text => {
+    setState({password: text});
+  };
+
+  const onChangeTextYourName = text => {
+    setState({yourName: text});
+  };
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={onBackPressed}>
         <SvgXml xml={svgs.icBack} width={16} height={16} />
       </TouchableOpacity>
 
       <Text style={styles.titleHeader}>Register</Text>
-      {enumStep.step1 === 'STEP-1' ? (
+      {state.currentStep === enumStepSignUp.step1 ? (
         <>
-          <InputCT placeholder="email@gmail.com" />
+          <InputCT
+            placeholder="email@gmail.com"
+            onChangeText={text => {
+              onChangeTextEmail(text);
+            }}
+            value={state.email}
+          />
           <InputCT
             style={styles.marginInputText}
             type="Password"
             placeholder="Password"
+            onChangeText={text => onChangeTextPassword(text)}
+            value={state.password}
           />
-          <ButtonCT title="Next" />
+          <ButtonCT title="Next" onPress={onNextPressed} />
         </>
       ) : (
         <>
-          <InputCT placeholder="Enter your name" />
+          <InputCT
+            placeholder="Enter your name"
+            onChangeText={text => onChangeTextYourName(text)}
+            value={state.yourName}
+          />
 
-          <ButtonCT title="Sign up" style={styles.marginButtonSignUp} />
+          <ButtonCT
+            title="Sign up"
+            style={styles.marginButtonSignUp}
+            onPress={onSignUpPressed}
+          />
 
           <Text>
             {' By signing up, you agree to Photo’s'}
