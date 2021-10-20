@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  SafeAreaView, Text, View,
-} from 'react-native';
-import ButtonCT from './src/views/components/buttonCT';
-
+import AppNavigation from './src/views/navigations';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+const Stack = createNativeStackNavigator();
 const App = () => {
-  return (
-    <SafeAreaView style={{ flex: 1}} >
-     <ButtonCT/>
-    </SafeAreaView>
-  );
+  return <AppNavigation />;
 };
 
 export default App;
