@@ -28,7 +28,7 @@ const HomeFlow = () => {
 
 const AppNavigation = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer useNativeDriver>
       <AuthFlow />
     </NavigationContainer>
   );
